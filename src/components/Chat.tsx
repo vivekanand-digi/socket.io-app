@@ -86,7 +86,7 @@ const Chat = () => {
                                                 {
                                                     user.messages && user.messages.map((message: any) => {
                                                         return (
-                                                            <div className={`flex flex-col gap-1 mb-6 ${message.fromSelf ? 'text-green-500' : 'text-red-500'}`}>
+                                                            <div key ={user.id} className={`flex flex-col gap-1 mb-6 ${message.fromSelf ? 'text-green-500' : 'text-red-500'}`}>
                                                                 <div>{message.fromSelf ? '(Me)' : selectedUser.username}</div>
                                                                 <div>{message.content}</div>
                                                             </div>
