@@ -46,7 +46,7 @@ const Chat = () => {
                         {
                             users && users.map((user: any) => {
                                 return (
-                                    <div className='flex gap-2'>
+                                    <div className='flex gap-2' key={user.name}>
                                         <button className={`flex flex-col gap-1 p-3 w-full ${selectedUser && selectedUser.userID === user.userID && 'bg-purple-800'
                                             }`} onClick={() => setSelectedUser(user)}>
                                             <div className='text-white'>{user.username} {user.self && '(Me)'}</div>

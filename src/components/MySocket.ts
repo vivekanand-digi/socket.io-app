@@ -7,7 +7,7 @@ class MySocket {
     public users: any[] = [];
     public selectedUser: any = null;
     constructor() {
-        this.URL = 'http://localhost:3001';
+        this.URL = 'https://chat-service-rb7u.onrender.com';
         this.socket = io(this.URL, { autoConnect: false });
         this.socket.onAny((event: any, ...args: any) => {
         });
